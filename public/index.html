@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Hackathon - Submit Your Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Hackathon</h1>
+      <p class="subtitle">Project Submission Portal</p>
+    </header>
+
+    <div id="window-status" class="window-status">
+      <span id="status-icon"></span>
+      <div>
+        <p id="status-text"></p>
+        <p id="countdown" class="countdown"></p>
+      </div>
+    </div>
+
+    <section id="submission-form-section" class="card">
+      <h2>Submit Your Project</h2>
+      <form id="submission-form">
+        <div class="form-group">
+          <label for="teamName">Team Name *</label>
+          <input type="text" id="teamName" name="teamName" required placeholder="e.g. Neural Ninjas">
+        </div>
+        <div class="form-group">
+          <label for="projectName">Project Name *</label>
+          <input type="text" id="projectName" name="projectName" required placeholder="e.g. SmartAssist AI">
+        </div>
+        <div class="form-group">
+          <label for="description">Description *</label>
+          <textarea id="description" name="description" required rows="4"
+            placeholder="Describe your project, what problem it solves, and what AI technologies you used."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="repoUrl">Repository URL</label>
+          <input type="url" id="repoUrl" name="repoUrl" placeholder="https://github.com/your-team/your-project">
+        </div>
+        <div class="form-group">
+          <label for="members">Team Members (comma-separated)</label>
+          <input type="text" id="members" name="members" placeholder="e.g. Alice, Bob, Charlie">
+        </div>
+        <button type="submit" id="submit-btn">Submit Project</button>
+      </form>
+      <div id="form-message" class="form-message"></div>
+    </section>
+
+    <section class="card">
+      <h2>Submissions</h2>
+      <div id="submissions-list">
+        <p class="empty-state">Loading submissions...</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
