@@ -1,2 +1,9 @@
 node_modules/
-data/submissions.json
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+dist/
+build/
+*.egg-info/

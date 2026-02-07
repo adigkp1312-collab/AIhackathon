@@ -1,0 +1,14 @@
+[project]
+name = "seekho-free"
+version = "0.1.0"
+description = "Free AI-powered learning platform - aggregates free courses from YouTube, universities & more with voice-first AI search"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.27.0",
+    "boto3>=1.34.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.0.0",
+    "jinja2>=3.1.0",
+    "python-dotenv>=1.0.0",
+]

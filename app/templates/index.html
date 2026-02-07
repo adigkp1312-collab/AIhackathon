@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SeekhoFree - Learn Anything, Free Forever</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo">
+        <h1>SeekhoFree</h1>
+        <span class="tagline">Learn Anything. Free Forever.</span>
+      </div>
+      <div class="lang-select">
+        <select id="language-select">
+          <option value="hi-IN">Hindi</option>
+          <option value="en-IN" selected>English</option>
+          <option value="ta-IN">Tamil</option>
+          <option value="te-IN">Telugu</option>
+          <option value="bn-IN">Bengali</option>
+          <option value="gu-IN">Gujarati</option>
+          <option value="kn-IN">Kannada</option>
+          <option value="ml-IN">Malayalam</option>
+          <option value="mr-IN">Marathi</option>
+          <option value="pa-IN">Punjabi</option>
+          <option value="od-IN">Odia</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="chat-container" id="chat-container">
+      <div class="welcome-msg" id="welcome">
+        <div class="welcome-icon">&#x1F393;</div>
+        <h2>Namaste! What do you want to learn today?</h2>
+        <p>I'll find the best free courses from YouTube, NPTEL, MIT OCW & more and create a structured learning plan for you.</p>
+        <div class="quick-topics">
+          <button class="topic-chip" data-query="I want to learn Python programming from scratch">Python</button>
+          <button class="topic-chip" data-query="I want to learn machine learning">Machine Learning</button>
+          <button class="topic-chip" data-query="I want to learn web development">Web Dev</button>
+          <button class="topic-chip" data-query="mujhe English speaking seekhni hai">English Speaking</button>
+          <button class="topic-chip" data-query="I want to learn data science with Python">Data Science</button>
+          <button class="topic-chip" data-query="I want to prepare for GATE CS exam">GATE Prep</button>
+        </div>
+        <div class="platforms">
+          <p class="platform-label">Also available on:</p>
+          <div class="platform-icons">
+            <span class="platform" title="WhatsApp">&#x1F4F1; WhatsApp</span>
+            <span class="platform" title="Messenger">&#x1F4AC; Messenger</span>
+            <span class="platform" title="Telegram">&#x2708;&#xFE0F; Telegram</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="messages" class="messages"></div>
+    </main>
+
+    <footer class="input-area">
+      <div class="input-row">
+        <button class="voice-btn" id="voice-btn" title="Speak your query">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8" y1="23" x2="16" y2="23"/>
+          </svg>
+        </button>
+        <input type="text" id="user-input" placeholder="What do you want to learn? (e.g. 'Python programming' or 'mujhe ML seekhna hai')" autocomplete="off">
+        <button class="send-btn" id="send-btn" title="Send">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+      <p class="powered-by">Powered by Amazon Bedrock + Sarvam AI | 100% Free</p>
+    </footer>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
