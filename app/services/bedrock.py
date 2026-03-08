@@ -1,15 +1,14 @@
 """
-AI Course Planner powered by Amazon Bedrock.
+AI Course Planner — Vertex AI (Gemini) primary, Bedrock fallback, demo fallback.
 
 Takes a user's learning goal and generates a structured course plan
 with modules, topics, and links to free resources.
 """
 
 import json
-import boto3
 from app.config import settings
 
-SYSTEM_PROMPT = """You are SeekhoFree AI, an expert learning advisor for Indian students and professionals.
+SYSTEM_PROMPT = """You are Adiyogi AI Education, an expert learning advisor for Indian students and professionals.
 Your job is to create structured, free learning plans from publicly available resources.
 
 When a user says what they want to learn, you must:
@@ -54,62 +53,97 @@ If the user's message is conversational (greeting, question, etc.), respond with
 """
 
 
-def get_bedrock_client():
-    kwargs = {"region_name": settings.AWS_REGION}
-    if settings.AWS_ACCESS_KEY_ID:
-        kwargs["aws_access_key_id"] = settings.AWS_ACCESS_KEY_ID
-        kwargs["aws_secret_access_key"] = settings.AWS_SECRET_ACCESS_KEY
-    return boto3.client("bedrock-runtime", **kwargs)
-
-
 def generate_course_plan(user_message: str, conversation_history: list = None) -> dict:
     """
-    Use Amazon Bedrock to generate a structured learning plan.
-    Falls back to a demo response if Bedrock is not configured.
+    Generate a structured learning plan.
+    Priority: Gemini → Bedrock → Demo fallback.
     """
     messages = []
     if conversation_history:
         messages.extend(conversation_history)
     messages.append({"role": "user", "content": user_message})
 
-    # Try Bedrock first
+    # 1. Try Gemini (Vertex AI) first
+    if settings.GOOGLE_API_KEY:
+        try:
+            return _gemini_generate(messages)
+        except Exception as e:
+            print(f"Gemini error (trying Bedrock): {e}")
+
+    # 2. Try Bedrock fallback
     if settings.AWS_ACCESS_KEY_ID:
         try:
-            client = get_bedrock_client()
-            body = json.dumps(
-                {
-                    "anthropic_version": "bedrock-2023-05-31",
-                    "max_tokens": 4096,
-                    "system": SYSTEM_PROMPT,
-                    "messages": messages,
-                }
-            )
-            response = client.invoke_model(
-                modelId=settings.BEDROCK_MODEL_ID,
-                contentType="application/json",
-                accept="application/json",
-                body=body,
-            )
-            result = json.loads(response["body"].read())
-            text = result["content"][0]["text"]
-            return json.loads(text)
+            return _bedrock_generate(messages)
         except Exception as e:
             print(f"Bedrock error (falling back to demo): {e}")
 
-    # Demo fallback when Bedrock is not configured
+    # 3. Demo fallback
     return _demo_course_plan(user_message)
+
+
+def _gemini_generate(messages: list) -> dict:
+    """Use Google Gemini via google-genai SDK."""
+    from google import genai
+
+    client = genai.Client(api_key=settings.GOOGLE_API_KEY)
+
+    # Build conversation for Gemini
+    contents = []
+    for msg in messages:
+        role = "user" if msg["role"] == "user" else "model"
+        contents.append({"role": role, "parts": [{"text": msg["content"]}]})
+
+    response = client.models.generate_content(
+        model=settings.GEMINI_MODEL,
+        contents=contents,
+        config={
+            "system_instruction": SYSTEM_PROMPT,
+            "response_mime_type": "application/json",
+            "temperature": 0.7,
+            "max_output_tokens": 4096,
+        },
+    )
+    return json.loads(response.text)
+
+
+def _bedrock_generate(messages: list) -> dict:
+    """Use Amazon Bedrock (Claude) as fallback."""
+    import boto3
+
+    kwargs = {"region_name": settings.AWS_REGION}
+    if settings.AWS_ACCESS_KEY_ID:
+        kwargs["aws_access_key_id"] = settings.AWS_ACCESS_KEY_ID
+        kwargs["aws_secret_access_key"] = settings.AWS_SECRET_ACCESS_KEY
+    client = boto3.client("bedrock-runtime", **kwargs)
+
+    body = json.dumps(
+        {
+            "anthropic_version": "bedrock-2023-05-31",
+            "max_tokens": 4096,
+            "system": SYSTEM_PROMPT,
+            "messages": messages,
+        }
+    )
+    response = client.invoke_model(
+        modelId=settings.BEDROCK_MODEL_ID,
+        contentType="application/json",
+        accept="application/json",
+        body=body,
+    )
+    result = json.loads(response["body"].read())
+    text = result["content"][0]["text"]
+    return json.loads(text)
 
 
 def _demo_course_plan(user_message: str) -> dict:
     """Generate a demo course plan for prototype demonstration."""
     msg = user_message.lower()
 
-    # Simple keyword matching for demo
     if any(word in msg for word in ["hi", "hello", "hey", "namaste"]):
         return {
             "type": "conversation",
             "message": (
-                "Namaste! I'm SeekhoFree AI. Tell me what you want to learn "
+                "Namaste! I'm Adiyogi AI Education. Tell me what you want to learn "
                 "and I'll create a free course plan for you from the best "
                 "YouTube, NPTEL, and university resources. For example, try: "
                 "'I want to learn Python programming' or "
@@ -289,13 +323,7 @@ def _demo_ml_plan():
                 "title": "Core Machine Learning",
                 "description": "Supervised learning, regression, classification, and evaluation",
                 "duration": "3 weeks",
-                "topics": [
-                    "Linear Regression",
-                    "Logistic Regression",
-                    "Decision Trees",
-                    "SVM",
-                    "Model Evaluation",
-                ],
+                "topics": ["Linear Regression", "Logistic Regression", "Decision Trees", "SVM", "Model Evaluation"],
                 "resources": [
                     {
                         "title": "Machine Learning Specialization - Andrew Ng (Stanford)",

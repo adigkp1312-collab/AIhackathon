@@ -1,0 +1,274 @@
+[
+  {
+    "id": "cwh-ml",
+    "title": "Machine Learning in Hindi - Full Course",
+    "provider": "CodeWithHarry",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=7uwa9aPbBRU",
+    "thumbnail": "https://i.ytimg.com/vi/7uwa9aPbBRU/mqdefault.jpg",
+    "description": "Complete ML course in Hindi covering all fundamentals with Python examples",
+    "duration": "12 hours",
+    "level": "beginner",
+    "language": "Hindi",
+    "topics": [
+      "machine learning",
+      "python",
+      "scikit-learn"
+    ],
+    "free": true
+  },
+  {
+    "id": "cwh-python",
+    "title": "Python Tutorial for Beginners (Full Course)",
+    "provider": "CodeWithHarry",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=7wnove7K-ZQ",
+    "thumbnail": "https://i.ytimg.com/vi/7wnove7K-ZQ/mqdefault.jpg",
+    "description": "Complete Python course in Hindi \u2014 beginner to advanced",
+    "duration": "14 hours",
+    "level": "beginner",
+    "language": "Hindi",
+    "topics": [
+      "python",
+      "programming"
+    ],
+    "free": true
+  },
+  {
+    "id": "3b1b-nn",
+    "title": "Neural Networks (3Blue1Brown)",
+    "provider": "3Blue1Brown",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi",
+    "thumbnail": "https://i.ytimg.com/vi/aircAruvnKk/mqdefault.jpg",
+    "description": "Beautiful visual explanations of how neural networks learn",
+    "duration": "4 hours",
+    "level": "beginner",
+    "language": "English",
+    "topics": [
+      "neural networks",
+      "deep learning",
+      "math"
+    ],
+    "free": true
+  },
+  {
+    "id": "fcc-ml",
+    "title": "Machine Learning for Everybody",
+    "provider": "freeCodeCamp",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=i_LwzRVP7bg",
+    "thumbnail": "https://i.ytimg.com/vi/i_LwzRVP7bg/mqdefault.jpg",
+    "description": "Full university-level ML course \u2014 no math prerequisites",
+    "duration": "10 hours",
+    "level": "beginner",
+    "language": "English",
+    "topics": [
+      "machine learning",
+      "python"
+    ],
+    "free": true
+  },
+  {
+    "id": "campusx-100",
+    "title": "100 Days of Machine Learning",
+    "provider": "CampusX",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/playlist?list=PLKnIA16OIAGMGda7kJ2GyiQ1cHSv0cYEo",
+    "thumbnail": "https://i.ytimg.com/vi/7uwa9aPbBRU/mqdefault.jpg",
+    "description": "Comprehensive Hindi ML bootcamp \u2014 100 daily videos",
+    "duration": "100 hours",
+    "level": "beginner",
+    "language": "Hindi",
+    "topics": [
+      "machine learning",
+      "data science",
+      "python"
+    ],
+    "free": true
+  },
+  {
+    "id": "stanford-cs229",
+    "title": "Stanford CS229: Machine Learning",
+    "provider": "Stanford Online",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU",
+    "thumbnail": "https://i.ytimg.com/vi/jGwO_UgTS7I/mqdefault.jpg",
+    "description": "Andrew Ng's legendary Stanford ML course \u2014 full lectures",
+    "duration": "20 hours",
+    "level": "intermediate",
+    "language": "English",
+    "topics": [
+      "machine learning",
+      "statistics",
+      "optimization"
+    ],
+    "free": true
+  },
+  {
+    "id": "fast-ai",
+    "title": "Practical Deep Learning for Coders",
+    "provider": "fast.ai",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/playlist?list=PLfYUBJiXbdtSvpQjSnJJ_PmDQB_VyT5iU",
+    "thumbnail": "https://i.ytimg.com/vi/8SF_h3xF3cE/mqdefault.jpg",
+    "description": "Top-down approach to deep learning \u2014 build first, theory later",
+    "duration": "30 hours",
+    "level": "intermediate",
+    "language": "English",
+    "topics": [
+      "deep learning",
+      "pytorch",
+      "computer vision",
+      "nlp"
+    ],
+    "free": true
+  },
+  {
+    "id": "nptel-dl",
+    "title": "Deep Learning - NPTEL (IIT Madras)",
+    "provider": "NPTEL",
+    "platform": "nptel",
+    "url": "https://nptel.ac.in/courses/106106213",
+    "thumbnail": "",
+    "description": "IIT Madras deep learning course with certificate option",
+    "duration": "12 weeks",
+    "level": "intermediate",
+    "language": "English",
+    "topics": [
+      "deep learning",
+      "neural networks",
+      "cnn",
+      "rnn"
+    ],
+    "free": true
+  },
+  {
+    "id": "stanford-cs231n",
+    "title": "Stanford CS231n: CNNs for Visual Recognition",
+    "provider": "Stanford Online",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv",
+    "thumbnail": "https://i.ytimg.com/vi/vT1JzLTH4G4/mqdefault.jpg",
+    "description": "Deep dive into convolutional neural networks \u2014 Andrej Karpathy",
+    "duration": "20 hours",
+    "level": "advanced",
+    "language": "English",
+    "topics": [
+      "computer vision",
+      "cnn",
+      "deep learning"
+    ],
+    "free": true
+  },
+  {
+    "id": "huggingface-nlp",
+    "title": "HuggingFace NLP Course",
+    "provider": "HuggingFace",
+    "platform": "huggingface",
+    "url": "https://huggingface.co/learn/nlp-course",
+    "thumbnail": "",
+    "description": "Learn transformers, fine-tuning, and modern NLP from HuggingFace",
+    "duration": "15 hours",
+    "level": "advanced",
+    "language": "English",
+    "topics": [
+      "nlp",
+      "transformers",
+      "huggingface",
+      "llm"
+    ],
+    "free": true
+  },
+  {
+    "id": "mit-intro-ml",
+    "title": "MIT 6.036: Introduction to Machine Learning",
+    "provider": "MIT OpenCourseWare",
+    "platform": "mit_ocw",
+    "url": "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+6.036+1T2019/about",
+    "thumbnail": "",
+    "description": "MIT's introductory ML course with problem sets and exams",
+    "duration": "15 weeks",
+    "level": "intermediate",
+    "language": "English",
+    "topics": [
+      "machine learning",
+      "math",
+      "algorithms"
+    ],
+    "free": true
+  },
+  {
+    "id": "deeplearning-ai-genai",
+    "title": "Generative AI for Everyone",
+    "provider": "DeepLearning.AI",
+    "platform": "coursera_audit",
+    "url": "https://www.coursera.org/learn/generative-ai-for-everyone",
+    "thumbnail": "",
+    "description": "Andrew Ng explains generative AI \u2014 what it is and how to use it",
+    "duration": "5 hours",
+    "level": "beginner",
+    "language": "English",
+    "topics": [
+      "generative ai",
+      "llm",
+      "prompt engineering"
+    ],
+    "free": true
+  },
+  {
+    "id": "google-ml-crash",
+    "title": "Google Machine Learning Crash Course",
+    "provider": "Google",
+    "platform": "google",
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "thumbnail": "",
+    "description": "Google's fast-paced ML course with TensorFlow exercises",
+    "duration": "15 hours",
+    "level": "beginner",
+    "language": "English",
+    "topics": [
+      "machine learning",
+      "tensorflow",
+      "google"
+    ],
+    "free": true
+  },
+  {
+    "id": "karpathy-nn-zero",
+    "title": "Neural Networks: Zero to Hero",
+    "provider": "Andrej Karpathy",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
+    "thumbnail": "https://i.ytimg.com/vi/VMj-3S1tku0/mqdefault.jpg",
+    "description": "Build neural networks from scratch \u2014 backprop, GPT, tokenizers",
+    "duration": "20 hours",
+    "level": "intermediate",
+    "language": "English",
+    "topics": [
+      "neural networks",
+      "gpt",
+      "transformers",
+      "backpropagation"
+    ],
+    "free": true
+  },
+  {
+    "id": "statquest-ml",
+    "title": "StatQuest Machine Learning",
+    "provider": "StatQuest",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF",
+    "thumbnail": "https://i.ytimg.com/vi/Gv9_4yMHFhI/mqdefault.jpg",
+    "description": "Statistics and ML explained with fun visual animations",
+    "duration": "25 hours",
+    "level": "beginner",
+    "language": "English",
+    "topics": [
+      "machine learning",
+      "statistics",
+      "data science"
+    ],
+    "free": true
+  }
+]

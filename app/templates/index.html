@@ -3,78 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SeekhoFree - Learn Anything, Free Forever</title>
+  <title>Adiyogi AI Education - Learn Anything For Free</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
   <div class="app">
+    <!-- Header -->
     <header class="header">
       <div class="logo">
-        <h1>SeekhoFree</h1>
-        <span class="tagline">Learn Anything. Free Forever.</span>
+        <div class="logo-mark">A</div>
+        <div class="logo-text">
+          <h1>Adiyogi AI</h1>
+          <span class="tagline">Education</span>
+        </div>
       </div>
-      <div class="lang-select">
-        <select id="language-select">
-          <option value="hi-IN">Hindi</option>
-          <option value="en-IN" selected>English</option>
-          <option value="ta-IN">Tamil</option>
-          <option value="te-IN">Telugu</option>
-          <option value="bn-IN">Bengali</option>
-          <option value="gu-IN">Gujarati</option>
-          <option value="kn-IN">Kannada</option>
-          <option value="ml-IN">Malayalam</option>
-          <option value="mr-IN">Marathi</option>
-          <option value="pa-IN">Punjabi</option>
-          <option value="od-IN">Odia</option>
-        </select>
+      <div class="header-right">
+        <div class="lang-select">
+          <div class="lang-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <select id="language-select">
+            <option value="hi-IN">Hindi</option>
+            <option value="en-IN" selected>English</option>
+            <option value="ta-IN">Tamil</option>
+            <option value="te-IN">Telugu</option>
+            <option value="bn-IN">Bengali</option>
+            <option value="gu-IN">Gujarati</option>
+            <option value="kn-IN">Kannada</option>
+            <option value="ml-IN">Malayalam</option>
+            <option value="mr-IN">Marathi</option>
+            <option value="pa-IN">Punjabi</option>
+            <option value="od-IN">Odia</option>
+          </select>
+        </div>
       </div>
     </header>
 
+    <!-- Chat area -->
     <main class="chat-container" id="chat-container">
-      <div class="welcome-msg" id="welcome">
-        <div class="welcome-icon">&#x1F393;</div>
-        <h2>Namaste! What do you want to learn today?</h2>
-        <p>I'll find the best free courses from YouTube, NPTEL, MIT OCW & more and create a structured learning plan for you.</p>
-        <div class="quick-topics">
-          <button class="topic-chip" data-query="I want to learn Python programming from scratch">Python</button>
-          <button class="topic-chip" data-query="I want to learn machine learning">Machine Learning</button>
-          <button class="topic-chip" data-query="I want to learn web development">Web Dev</button>
-          <button class="topic-chip" data-query="mujhe English speaking seekhni hai">English Speaking</button>
-          <button class="topic-chip" data-query="I want to learn data science with Python">Data Science</button>
-          <button class="topic-chip" data-query="I want to prepare for GATE CS exam">GATE Prep</button>
+      <!-- Welcome / Hero -->
+      <div class="welcome" id="welcome">
+        <div class="hero">
+          <div class="hero-badge">AI for Bharat Hackathon | Hack2Skill + AWS</div>
+          <h2 class="hero-title">Learn Anything.<br><span class="highlight">Free Forever.</span></h2>
+          <p class="hero-desc">A voice-first AI that organizes free education from YouTube, NPTEL, MIT OCW, Khan Academy & more - for every Indian, in every Indian language.</p>
         </div>
-        <div class="platforms">
-          <p class="platform-label">Also available on:</p>
-          <div class="platform-icons">
-            <span class="platform" title="WhatsApp">&#x1F4F1; WhatsApp</span>
-            <span class="platform" title="Messenger">&#x1F4AC; Messenger</span>
-            <span class="platform" title="Telegram">&#x2708;&#xFE0F; Telegram</span>
+
+        <div class="quick-topics">
+          <p class="section-label">Try asking:</p>
+          <div class="chips">
+            <button class="chip" data-query="I want to learn Python programming from scratch">
+              <span class="chip-icon">&#x1F40D;</span> Python
+            </button>
+            <button class="chip" data-query="I want to learn machine learning">
+              <span class="chip-icon">&#x1F916;</span> Machine Learning
+            </button>
+            <button class="chip" data-query="I want to learn web development">
+              <span class="chip-icon">&#x1F310;</span> Web Dev
+            </button>
+            <button class="chip" data-query="mujhe English speaking seekhni hai">
+              <span class="chip-icon">&#x1F4AC;</span> English Speaking
+            </button>
+            <button class="chip" data-query="I want to learn data science with Python">
+              <span class="chip-icon">&#x1F4CA;</span> Data Science
+            </button>
+            <button class="chip" data-query="I want to prepare for GATE CS exam">
+              <span class="chip-icon">&#x1F393;</span> GATE Prep
+            </button>
           </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">&#x1F399;&#xFE0F;</div>
+            <div class="feature-title">Voice-First</div>
+            <div class="feature-desc">Speak in any of 11 Indian languages</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">&#x1F4B0;</div>
+            <div class="feature-title">100% Free</div>
+            <div class="feature-desc">Only free resources, forever</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">&#x1F1EE;&#x1F1F3;</div>
+            <div class="feature-title">Hindi-First</div>
+            <div class="feature-desc">Prioritizes regional language content</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">&#x1F4F1;</div>
+            <div class="feature-title">Multi-Platform</div>
+            <div class="feature-desc">Web, WhatsApp, Telegram</div>
+          </div>
+        </div>
+
+        <div class="platforms-bar">
+          <span class="platform-badge whatsapp">WhatsApp</span>
+          <span class="platform-badge telegram">Telegram</span>
+          <span class="platform-badge messenger">Messenger</span>
+          <span class="platform-badge web">Web App</span>
+        </div>
+
+        <div class="powered-strip">
+          Powered by <strong>Amazon Bedrock</strong> + <strong>Sarvam AI</strong>
         </div>
       </div>
 
+      <!-- Messages -->
       <div id="messages" class="messages"></div>
     </main>
 
+    <!-- Input -->
     <footer class="input-area">
       <div class="input-row">
-        <button class="voice-btn" id="voice-btn" title="Speak your query">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <button class="voice-btn" id="voice-btn" title="Speak in any Indian language">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
             <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
             <line x1="12" y1="19" x2="12" y2="23"/>
             <line x1="8" y1="23" x2="16" y2="23"/>
           </svg>
         </button>
-        <input type="text" id="user-input" placeholder="What do you want to learn? (e.g. 'Python programming' or 'mujhe ML seekhna hai')" autocomplete="off">
+        <input type="text" id="user-input" placeholder="What do you want to learn? Try Hindi too: 'mujhe coding seekhna hai'" autocomplete="off">
         <button class="send-btn" id="send-btn" title="Send">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <line x1="22" y1="2" x2="11" y2="13"/>
             <polygon points="22 2 15 22 11 13 2 9 22 2"/>
           </svg>
         </button>
       </div>
-      <p class="powered-by">Powered by Amazon Bedrock + Sarvam AI | 100% Free</p>
     </footer>
   </div>
 
